@@ -1,6 +1,9 @@
 # Tterminator Search
 A Google search plugin for Terminator terminal emulator
 
+# Requirments
+  - xdg-open
+
 # Installation
   - Create the plugins folder if it doesn't exist. On linux: mkdir -p ~/.config/terminator/plugins
   - Copy the plugin file `terminator_search.py` to the plugins folder.
