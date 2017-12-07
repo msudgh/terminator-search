@@ -1,7 +1,7 @@
 # Terminator Search
 A Google search plugin for Terminator terminal emulator
 
-# Requirments
+# Requirements
   - xdg-open
 
 # Installation
