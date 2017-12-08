@@ -7,7 +7,7 @@ A Google search plugin for Terminator terminal emulator
 # Installation
   - Create the plugins folder if it doesn't exist. On linux: mkdir -p ~/.config/terminator/plugins
   - Copy the plugin file `terminator_search.py` to the plugins folder.
-  - In Terminator go to Preferences >> Plugins and enable TerminatorSearach.
+  - In Terminator go to Preferences >> Plugins and enable TerminatorSearch.
   - Restart Terminator.
 
 # Usage
