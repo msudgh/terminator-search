@@ -25,14 +25,18 @@ class TerminatorSearch(plugin.MenuItem):
 
     # make available search item in context menu if the clipboard isn't empty
     if len(content_summary) > 0 and content_summary != None:
-      self.add_submenu(menu, ('Search For %s...' % (content_summary)), terminal)
+      self.add_submenu(menu, ('Search For %s Exploit' % (content_summary)), terminal, 1)
+      self.add_submenu(menu, ('Search For %s...' % (content_summary)), terminal, 0)
 
-  def add_submenu(self, submenu, name, terminal):
+  def add_submenu(self, submenu, name, terminal, searchExp):
     # create menu item
     menu = Gtk.MenuItem(name)
 
     # call on_click method while Clicking on menu item
-    menu.connect("activate", self.on_click, terminal)
+    if searchExp:
+      menu.connect("activate", self.on_click_exp, terminal)
+    else:
+      menu.connect("activate", self.on_click, terminal)
 
     # append menu item to context menu
     submenu.append(menu)
@@ -40,4 +44,8 @@ class TerminatorSearch(plugin.MenuItem):
 
   def on_click(self, widget, event):
     url = 'https://www.google.com/search?q=' + self.content
+    call(["xdg-open", url])
+
+  def on_click_exp(self, widget, event):
+    url = 'https://www.google.com/search?q=' + self.content + '+exploit'
     call(["xdg-open", url])
