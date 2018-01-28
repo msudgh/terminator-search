@@ -13,7 +13,8 @@ A Google search plugin for Terminator terminal emulator
 # Usage
   - Highlight some text in your active terminal
   - Right click on the terminal window
-  - Click on the **`Search For ...`** item
+  - Click on the **`Search For ...`** item for broad search
+    - Or, on the **`Search For ... Exploit`** item for exploit search
   - Enjoy!
 
 # License
